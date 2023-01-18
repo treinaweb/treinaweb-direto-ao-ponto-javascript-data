@@ -1,14 +1,26 @@
-const data1 = new Date();
-const data2 = new Date("December 17, 2022 03:24:00.001z");
-const data3 = new Date("2021-11-15T13:15:01Z");
-var mes = 5
-const data4 = new Date(2020, mes - 1, 10, 11 - 3, 13, 15);
-const data5 = Date.UTC(2020, mes - 1, 10, 11, 13, 15);
-const data6 = new Date(2000);
+// 1 janeiro de 1970 as 00:00:00 UTC
 
-console.log('data 1:', data1);
-console.log('data 2:', data2);
-console.log('data 3:', data3);
-console.log('data 4:', data4);
-console.log('data 6:', data6);
-console.log(data5);
+// formas de pegar o timestemp
+// const data = new Date();
+// const timestemp1 = Date.now();
+
+// console.log(timestemp1);
+// console.log(data.getTime());
+// console.log(+new Date());
+
+// calculando quantos segundos passaram
+// const dataInicio = Date.now();
+// setTimeout(() => {
+//     const milisegundos = Date.now() - dataInicio;
+
+//     console.log(milisegundos / 1000);
+// }, 5000)
+
+const data1 = new Date('2022-12-15');
+const data2 = new Date('2023-12-15');
+const diffTime = data2.getTime() - data1.getTime();
+const diffDays = diffTime / (1000 * 60 * 60 * 24);
+console.log(diffDays);
+
+
+
