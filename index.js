@@ -1,30 +1,24 @@
 // const data = new Date('2023-04-16T12:10:05.123Z');
 
-// // pegar as horas subtraindo o UTC
-// const hora = data.getHours();
-// const horaSemUTC = data.getUTCHours();
+// // altera o dia mês e ano
+// data.setFullYear(2022);
+// data.setMonth(0);
+// data.setDate(24);
 
-// const minutos = data.getMinutes();
-// const minutosSemUTC = data.getUTCMinutes();
-
-// const seconds = data.getSeconds();
-
-// const milisegundos = data.getMilliseconds();
+// altera a hora, minuto, segundo e milisegundos
+// data.setHours(20 - 3, 21, 10);
+// data.setMinutes(40);
+// data.setSeconds(15);
+// data.setMilliseconds(120)
 
 // console.log(data);
-// // console.log('Horas Com UTC', hora);
-// // console.log('Horas Sem UTC', horaSemUTC);
 
-// // console.log('Minutos Com UTC', minutos);
-// // console.log('Minutos Sem UTC', minutosSemUTC);
 
-// console.log('segundos ', seconds);
+const data = new Date('2023-04-16T12:10:05.123Z');
+console.log(data);
+setTimeout(() => {
+    const novoDia = data.getDate() - 5;
 
-// console.log('milisegundos ', milisegundos);
-
-const data = new Date('2023-04-16T05:12:10.123Z');
-const hora = data.getUTCHours().toString().padStart(2, '0');
-const minutos = data.getMinutes().toString().padStart(2, '0');;
-const seconds = data.getSeconds().toString().padStart(2, '0');;
-
-console.log(`${hora}:${minutos}:${seconds}`);
+    data.setDate(novoDia);
+    console.log(data);
+}, 2000)
