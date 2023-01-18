@@ -1,30 +1,30 @@
-// const data = new Date('2023-04-16T12:00:05Z');
+// const data = new Date('2023-04-16T12:10:05.123Z');
 
-// // dia do mês é de 01 ao 30
-// const dia = data.getDate();
+// // pegar as horas subtraindo o UTC
+// const hora = data.getHours();
+// const horaSemUTC = data.getUTCHours();
 
-// // dia da semana que segunda começa com o valor sendo 0
-// const diaSemana = data.getDay();
+// const minutos = data.getMinutes();
+// const minutosSemUTC = data.getUTCMinutes();
 
-// // Mês do ano que janeiro começa com o valor sendo 0
-// const mes = data.getMonth();
+// const seconds = data.getSeconds();
 
-// // Retorna o ano
-// const ano = data.getFullYear();
+// const milisegundos = data.getMilliseconds();
 
-// console.log('Dia do mês ', dia);
-// console.log('Dia da semana ', diaSemana);
-// console.log('Mes do ano ', mes);
-// console.log('Ano ', ano);
+// console.log(data);
+// // console.log('Horas Com UTC', hora);
+// // console.log('Horas Sem UTC', horaSemUTC);
 
+// // console.log('Minutos Com UTC', minutos);
+// // console.log('Minutos Sem UTC', minutosSemUTC);
 
-// 16/04/2023
-// new Date(2023, 4 - 1, 16)
-const data = new Date('2023-04-16T12:00:05Z');
-const dia = data.getDate().toString().padStart(2, '0'); // 01 
+// console.log('segundos ', seconds);
 
-const mes = (data.getMonth() + 1).toString().padStart(2, '0');
+// console.log('milisegundos ', milisegundos);
 
-const ano = data.getFullYear();
-console.log(data);
-console.log(`${dia}/${mes}/${ano}`);
+const data = new Date('2023-04-16T05:12:10.123Z');
+const hora = data.getUTCHours().toString().padStart(2, '0');
+const minutos = data.getMinutes().toString().padStart(2, '0');;
+const seconds = data.getSeconds().toString().padStart(2, '0');;
+
+console.log(`${hora}:${minutos}:${seconds}`);
