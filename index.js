@@ -1,26 +1,30 @@
-// 1 janeiro de 1970 as 00:00:00 UTC
+// const data = new Date('2023-04-16T12:00:05Z');
 
-// formas de pegar o timestemp
-// const data = new Date();
-// const timestemp1 = Date.now();
+// // dia do mês é de 01 ao 30
+// const dia = data.getDate();
 
-// console.log(timestemp1);
-// console.log(data.getTime());
-// console.log(+new Date());
+// // dia da semana que segunda começa com o valor sendo 0
+// const diaSemana = data.getDay();
 
-// calculando quantos segundos passaram
-// const dataInicio = Date.now();
-// setTimeout(() => {
-//     const milisegundos = Date.now() - dataInicio;
+// // Mês do ano que janeiro começa com o valor sendo 0
+// const mes = data.getMonth();
 
-//     console.log(milisegundos / 1000);
-// }, 5000)
+// // Retorna o ano
+// const ano = data.getFullYear();
 
-const data1 = new Date('2022-12-15');
-const data2 = new Date('2023-12-15');
-const diffTime = data2.getTime() - data1.getTime();
-const diffDays = diffTime / (1000 * 60 * 60 * 24);
-console.log(diffDays);
+// console.log('Dia do mês ', dia);
+// console.log('Dia da semana ', diaSemana);
+// console.log('Mes do ano ', mes);
+// console.log('Ano ', ano);
 
 
+// 16/04/2023
+// new Date(2023, 4 - 1, 16)
+const data = new Date('2023-04-16T12:00:05Z');
+const dia = data.getDate().toString().padStart(2, '0'); // 01 
 
+const mes = (data.getMonth() + 1).toString().padStart(2, '0');
+
+const ano = data.getFullYear();
+console.log(data);
+console.log(`${dia}/${mes}/${ano}`);
